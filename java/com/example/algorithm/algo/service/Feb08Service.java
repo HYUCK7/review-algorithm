@@ -15,4 +15,5 @@ import java.util.Scanner;
  */
 public interface Feb08Service {
     void gugudan(Scanner scanner);
+    void lotto(Scanner scanner);
 }

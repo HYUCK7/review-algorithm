@@ -1,5 +1,6 @@
 package com.example.algorithm.algo.service;
 
+import java.util.Random;
 import java.util.Scanner;
 
 /**
@@ -45,4 +46,30 @@ public class Feb07ServiceImpl implements Feb07Service {
                 System.out.println("컴퓨터가 이겼습니다!");
             }
         }
+
+    @Override
+    public void dice1(Scanner scanner) {
+        Random random = new Random();
+        double d = Math.random();
+        int player = (int) (d*6)+1;
+        int com = random.nextInt(5)+1;
+        String s = "Draw";
+        if(player != com) s =(player>com) ? "win" : "lose";
     }
+
+    @Override
+    public void rps(Scanner scanner) {
+
+    }
+
+    @Override
+    public void sosu(Scanner scanner) {
+            int count = 0;
+        for(int i=2; i<= scanner.nextInt(); i++){
+            for(int j=2; j<i; j++){
+                if(i%j==0)count++;
+            }
+        }
+        System.out.println(count);
+    }
+}

@@ -15,6 +15,18 @@ import java.util.Scanner;
  */
 public class Feb08ServiceImpl implements Feb08Service{
     @Override
+    public void lotto(Scanner scanner) {
+        int[] lotto = new int[6];
+        for(int i=0; i<lotto.length; i++){
+            lotto[i] = (int)(Math.random()*45)+1;
+            for(int j=0; j < i; j++){
+                if(lotto[i] == lotto[j])
+                    i--;
+            } System.out.println("로또 랜덤 숫자" + lotto[i]);
+        }
+    }
+
+    @Override
     public void gugudan(Scanner scanner) {
         /** author : 유재혁
          *  date : 2022-02-08
@@ -44,7 +56,11 @@ public class Feb08ServiceImpl implements Feb08Service{
                 System.out.print("\n");
             }
             System.out.println("\n");
+
+
+
         }
+
 
 
 

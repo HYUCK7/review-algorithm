@@ -15,4 +15,7 @@ import java.util.Scanner;
  */
 public interface Feb07Service {
     void dice(Scanner scanner);
+    void dice1(Scanner scanner);
+    void rps(Scanner scanner);
+    void sosu(Scanner scanner);
 }
