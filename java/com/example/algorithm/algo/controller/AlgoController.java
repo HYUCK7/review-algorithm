@@ -1,9 +1,6 @@
 package com.example.algorithm.algo.controller;
 
-import com.example.algorithm.algo.service.Feb07Service;
-import com.example.algorithm.algo.service.Feb07ServiceImpl;
-import com.example.algorithm.algo.service.Feb08Service;
-import com.example.algorithm.algo.service.Feb08ServiceImpl;
+import com.example.algorithm.algo.service.*;
 
 import java.util.Scanner;
 
@@ -21,6 +18,7 @@ import java.util.Scanner;
 public class AlgoController {
     Feb07Service feb07Service = new Feb07ServiceImpl();
     Feb08Service feb08Service = new Feb08ServiceImpl();
+    Feb10Service feb10Service = new Feb10ServiceImpl();
         public void execute (Scanner scanner){
             while (true) {
                 System.out.println("MENU : 0. EXIT 1. Feb06Service 2.Feb07Service 3.Feb08Service 4. Feb10Sevice");
@@ -43,6 +41,11 @@ public class AlgoController {
                         case "1": break;
                         case "5": feb08Service.gugudan(scanner);
                     }
+                    case"4":
+                        System.out.println("\n0.Exit 1.MagicSquare");
+                        switch (scanner.next()) {
+                            case"1":feb10Service.magicSquare();
+                        }
                         }
                 }
             }
