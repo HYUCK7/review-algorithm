@@ -1,6 +1,5 @@
 package com.example.algorithm.algo.service;
 
-import java.util.Scanner;
 
 /**
  * packageName: com.example.algorithm.algo.service
@@ -14,8 +13,9 @@ import java.util.Scanner;
  * 2022/02/13         HYUCK7         최초 생성
  */
 public class Feb10ServiceImpl implements Feb10Service {
+
     @Override
-    public void magicSquare(Scanner scanner) {
+    public void magicSquare() {
         /**
          * 홀수 마방진 구하기
          * 1. 시작은 첫 행, 한 가운데 열에 1을 둔다.
@@ -81,5 +81,5 @@ public class Feb10ServiceImpl implements Feb10Service {
             System.out.println();
         }
     }
-    }
+}
 
